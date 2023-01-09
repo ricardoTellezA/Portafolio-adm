@@ -5,6 +5,7 @@ import "@shopify/polaris/build/esm/styles.css";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { AppProvider } from "@shopify/polaris";
+import './index.css'
 import {
   ApolloClient,
   InMemoryCache,

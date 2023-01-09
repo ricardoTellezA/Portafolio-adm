@@ -1,4 +1,3 @@
-import React from "react";
 import './Snipper.css'
 const Snipper = () => {
   return (

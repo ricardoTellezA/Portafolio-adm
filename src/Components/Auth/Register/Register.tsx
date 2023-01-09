@@ -14,7 +14,7 @@ import { useMutation } from "@apollo/client";
 import { toast } from "react-toastify";
 import Snipper from "../../Snipper/Snipper";
 
-const Register = () => {
+const Register = ({ setGoRegister }: any) => {
   const [register, setRegister] = useState<InterfaceRegister>({
     email: "",
     password: "",
@@ -56,6 +56,11 @@ const Register = () => {
         "Hubo un error al crear el usuario, es posible que el usuario ya exista"
       );
     }
+  };
+
+  const goSesion = (e: any) => {
+    e.preventDefault();
+    setGoRegister(false);
   };
   return (
     <>
@@ -101,6 +106,12 @@ const Register = () => {
                     onChange={(e) => handleChange("password", e)}
                   />
                 </FormLayout.Group>
+
+                <div className="register-container">
+                  <a href="" onClick={(e) => goSesion(e)} className="register">
+                    Iniciar sesión
+                  </a>
+                </div>
 
                 <FormLayout.Group>
                   {loading ? (
